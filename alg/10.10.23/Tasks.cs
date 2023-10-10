@@ -123,7 +123,7 @@ class Program {
             return;
         }
     }
-    Console.WriteLine($"Минимальный индекс/элемент: {minimalIndex}/{entered[minimalIndex]} Максимальный индекс/элемент: {maximalIndex}/{entered[maximalIndex]}");
+   
     Console.WriteLine("Убывающая последовательность выполняется");
   }
 }
