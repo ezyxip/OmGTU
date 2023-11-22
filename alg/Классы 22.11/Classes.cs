@@ -46,6 +46,28 @@ class HelloWorld {
         sts[i].Group = "ФИТ-23" + i;
     }
     
-    Student.FindByGroup(sts[0], "ФИТ-230");
+    Console.WriteLine("Выберите тип фильтра (1 - ФИО, 2 - Год рождения, 3 - Группа):");
+    string filterType = Console.ReadLine();
+    if(filterType == "1"){
+        Console.Write("Введите ФИО студента: ");
+        string name = Console.ReadLine();
+        foreach(Student i in sts){
+            Student.FindByName(i, name);
+        }
+    } else if(filterType == "2"){
+        Console.Write("Введите год рождения студента: ");
+        string yearOfBirth = Console.ReadLine();
+        foreach(Student i in sts){
+            Student.FindByYearOfBirth(i, yearOfBirth);
+        }
+    } else if(filterType == "3"){
+        Console.Write("Введите группу студента: ");
+        string group = Console.ReadLine();
+        foreach(Student i in sts){
+            Student.FindByGroup(i, group);
+        }
+    } else {
+        Console.Write("Недопустимый ввод");
+    }
   }
 }
